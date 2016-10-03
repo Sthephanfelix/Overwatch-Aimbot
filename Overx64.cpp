@@ -1,5 +1,5 @@
 
-// Overx64.cpp : ∂®“Â”¶”√≥Ã–Úµƒ¿‡––Œ™°£
+// Overx64.cpp : ÂÆö‰πâÂ∫îÁî®Á®ãÂ∫èÁöÑÁ±ªË°å‰∏∫„ÄÇ
 //
 
 #include "stdafx.h"
@@ -21,23 +21,23 @@ BEGIN_MESSAGE_MAP(COverx64App, CWinApp)
 END_MESSAGE_MAP()
 
 
-// COverx64App ππ‘Ï
+// COverx64App ÊûÑÈÄ†
  CHackProcess HackProcess;
 
 COverx64App::COverx64App()
 {
-	// ÷ß≥÷÷ÿ–¬∆Ù∂Øπ‹¿Ì∆˜
+	// ÊîØÊåÅÈáçÊñ∞ÂêØÂä®ÁÆ°ÁêÜÂô®
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_RESTART;
 
-	// TODO: ‘⁄¥À¥¶ÃÌº”ππ‘Ï¥˙¬Î£¨
-	// Ω´À˘”–÷ÿ“™µƒ≥ı ºªØ∑≈÷√‘⁄ InitInstance ÷–
+	// TODO: Âú®Ê≠§Â§ÑÊ∑ªÂä†ÊûÑÈÄ†‰ª£Á†ÅÔºå
+	// Â∞ÜÊâÄÊúâÈáçË¶ÅÁöÑÂàùÂßãÂåñÊîæÁΩÆÂú® InitInstance ‰∏≠
 }
 COverx64App theApp;
 
 PCSTR   MyWindowName = " nenene";
 HWND   MyHwnd;
 
-PCSTR    GameWindowName = " ÿÕ˚œ»∑Ê";
+PCSTR    GameWindowName = "Overwatch";
 PCSTR    GamePorcessName = "Overwatch.exe";
 HWND   GameHwnd;
 RECT      GameRectSize;
@@ -52,21 +52,21 @@ char zhuchengxu[64];
 char tou[64];
 char wei[64];
 DWORD ID;
-INT Read_INT(INT64 address	, DWORD Ω¯≥ÃID)
+INT Read_INT(INT64 address	, DWORD ËøõÁ®ãID)
 {
-	HANDLE ƒ⁄¥Ê≤Ÿ◊˜æ‰±˙;
+	HANDLE ÂÜÖÂ≠òÊìç‰ΩúÂè•ÊüÑ;
 	BOOL A;
 	INT ReadValue;
-	if (Ω¯≥ÃID == -1)
+	if (ËøõÁ®ãID == -1)
 	{
-		ƒ⁄¥Ê≤Ÿ◊˜æ‰±˙ = GetCurrentProcess();
+		ÂÜÖÂ≠òÊìç‰ΩúÂè•ÊüÑ = GetCurrentProcess();
 	}
 	else
 	{
-		ƒ⁄¥Ê≤Ÿ◊˜æ‰±˙ = OpenProcess(2035711, NULL, Ω¯≥ÃID);
+		ÂÜÖÂ≠òÊìç‰ΩúÂè•ÊüÑ = OpenProcess(2035711, NULL, ËøõÁ®ãID);
 	}
-	A = ReadProcessMemory(ƒ⁄¥Ê≤Ÿ◊˜æ‰±˙, (LPVOID)address, &ReadValue, 4, NULL);
-	CloseHandle(ƒ⁄¥Ê≤Ÿ◊˜æ‰±˙);
+	A = ReadProcessMemory(ÂÜÖÂ≠òÊìç‰ΩúÂè•ÊüÑ, (LPVOID)address, &ReadValue, 4, NULL);
+	CloseHandle(ÂÜÖÂ≠òÊìç‰ΩúÂè•ÊüÑ);
 	if (A == FALSE) { return INT(-1); }
 	else { return ReadValue; }
 }
@@ -105,7 +105,7 @@ LRESULT CALLBACK WinProc(HWND hWnd, UINT Message, WPARAM wParam, LPARAM lParam)
 void COverx64App::MyCreateWindow()
 {
 	::CreateThread(0, 0, (LPTHREAD_START_ROUTINE)GetGameWindowRect, 0, 0, 0);
-		WNDCLASSEX wndClass;//EX¥∞ø⁄¿‡
+		WNDCLASSEX wndClass;//EXÁ™óÂè£Á±ª
 		wndClass.cbClsExtra = NULL;
 		wndClass.cbSize = sizeof(WNDCLASSEX);
 		wndClass.cbWndExtra = NULL;
@@ -119,7 +119,7 @@ void COverx64App::MyCreateWindow()
 		wndClass.lpszMenuName = MyWindowName;
 		wndClass.style = CS_VREDRAW | CS_HREDRAW;
 
-	if (!RegisterClassEx(&wndClass))	exit(1);//≈–∂œ¥¥Ω®≥…π¶ ∑Ò->πÿ±’
+	if (!RegisterClassEx(&wndClass))	exit(1);//Âà§Êñ≠ÂàõÂª∫ÊàêÂäü Âê¶->ÂÖ≥Èó≠
 
 	GameHwnd = FindWindow(0, GameWindowName);
 	if (GameHwnd)
@@ -128,7 +128,7 @@ void COverx64App::MyCreateWindow()
 			MyHwnd = CreateWindowEx(
 			WS_EX_TOPMOST | 
 			WS_EX_TRANSPARENT | 
-			WS_EX_LAYERED|WS_EX_TOOLWINDOW,//»ŒŒÒ¿∏≤ªœ‘ æ
+			WS_EX_LAYERED|WS_EX_TOOLWINDOW,//‰ªªÂä°Ê†è‰∏çÊòæÁ§∫
 			MyWindowName,
 			MyWindowName,
 			WS_POPUP,
@@ -215,8 +215,8 @@ void  GetGameWindowRect()
 			}
 	
 			RECT targetSize =RECT();
-			GetWindowRect(GameHwnd, &targetSize);//ªÒ»°¥∞ø⁄¥Û–°
-			if (targetSize.left <= 0 && targetSize.top <= 0 && targetSize.right <= 0 && targetSize.bottom <= 0)//≈–∂œ¥∞ø⁄ «∑Ò◊Ó–°ªØ
+			GetWindowRect(GameHwnd, &targetSize);//Ëé∑ÂèñÁ™óÂè£Â§ßÂ∞è
+			if (targetSize.left <= 0 && targetSize.top <= 0 && targetSize.right <= 0 && targetSize.bottom <= 0)//Âà§Êñ≠Á™óÂè£ÊòØÂê¶ÊúÄÂ∞èÂåñ
 			{
 				GameWindowMinimize = true;
 				continue;
@@ -224,8 +224,8 @@ void  GetGameWindowRect()
 			GameWindowMinimize = false;
 
 			RECT borderSize = RECT();
-			GetClientRect(GameHwnd, &borderSize);//ªÒ»°¥∞ø⁄øÕªß«¯µƒ¥Û–°
-			DWORD dwStyle = GetWindowLong(GameHwnd, GWL_STYLE);//ªÒ»°¥∞ø⁄∑Á∏Ò
+			GetClientRect(GameHwnd, &borderSize);//Ëé∑ÂèñÁ™óÂè£ÂÆ¢Êà∑Âå∫ÁöÑÂ§ßÂ∞è
+			DWORD dwStyle = GetWindowLong(GameHwnd, GWL_STYLE);//Ëé∑ÂèñÁ™óÂè£È£éÊ†º
 			int windowheight;
 			int windowwidth;
 			int borderheight;
