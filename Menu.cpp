@@ -56,25 +56,25 @@ void MenuCreate(POINT MenuPoint)
 	{
 		EspRadio.MyRadioSelect = true;
 		AimRadio.MyRadioSelect = false;
-		MyMenuA.MyCreateMenu(MenuPoint, 260, 500, D2D1::ColorF::SkyBlue, "LV Clot[¬¿≤º] Insº¸-“˛≤ÿ/œ‘ æ");
+		MyMenuA.MyCreateMenu(MenuPoint, 260, 500, D2D1::ColorF::SkyBlue, "LV ÌÇ§ Ïà®Í∏∞Í∏∞/ÌëúÏãú");
 
 
 
-		Buttn_ESP.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 50, 15, 15, D2D1::ColorF::SkyBlue, " ∑Ω øÚ ESP");
-		Buttn_Health.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 80, 15, 15, D2D1::ColorF::SkyBlue, " —™ ¡ø Health");
-		Buttn_Distance.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 110, 15, 15, D2D1::ColorF::SkyBlue, " æ‡ ¿Î Distance");
-		Buttn_AimBot.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 140, 15, 15, D2D1::ColorF::SkyBlue, " ◊‘ √È AimBot");
-		Buttn_AimBotPre.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 170, 15, 15, D2D1::ColorF::SkyBlue, " ‘§ √È “∆ ∂Ø");
-		Buttn_AimBotPreHealth.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 200, 15, 15, D2D1::ColorF::SkyBlue, " ‘§ √È ∏ﬂ ∂»");
+		Buttn_ESP.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 50, 15, 15, D2D1::ColorF::SkyBlue, "ESP");
+		Buttn_Health.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 80, 15, 15, D2D1::ColorF::SkyBlue, "Ï≤¥Î†•");
+		Buttn_Distance.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 110, 15, 15, D2D1::ColorF::SkyBlue, "Í±∞Î¶¨");
+		Buttn_AimBot.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 140, 15, 15, D2D1::ColorF::SkyBlue, "ÏóêÏûÑ Î¥á");
+		Buttn_AimBotPre.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 170, 15, 15, D2D1::ColorF::SkyBlue, "ÌîÑÎ¶¨Î∑∞ Ïù¥Îèô Ï¢å/Ïö∞");
+		Buttn_AimBotPreHealth.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 200, 15, 15, D2D1::ColorF::SkyBlue, "ÌîÑÎ¶¨Î∑∞ Ïù¥Îèô ÏÉÅ/Ìïò");
 		
-		Buttn_AimBotSpeed.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 230, 15, 15, D2D1::ColorF::SkyBlue, " ∆Ω ª¨ √È ◊º");
-		Buttn_Team.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 260, 15, 15, D2D1::ColorF::SkyBlue, " «– ªª Õ≈ ∂” Team");
+		Buttn_AimBotSpeed.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 230, 15, 15, D2D1::ColorF::SkyBlue, "Ìú¥Î®∏ÎÇòÏù¥Ïßï");
+		Buttn_Team.MyCreateChack(MenuPoint.x + 25, MenuPoint.y + 260, 15, 15, D2D1::ColorF::SkyBlue, "ÌåÄ Ï°∞Ï§Ä");
 		HealthStyle.MyCreateButton(MenuPoint.x + 170, MenuPoint.y + 72, 15, 15, D2D1::ColorF::SkyBlue);
 		AimBotHeight.MyCreateButton(MenuPoint.x + 90, MenuPoint.y + 355, 33, 15, D2D1::ColorF::SkyBlue);
 		AimBotKey.MyCreateButton(MenuPoint.x + 210, MenuPoint.y + 280, 33, 15, D2D1::ColorF::SkyBlue);
 		Buttn_AimBotSpeedInt.MyCreateButton(MenuPoint.x + 90, MenuPoint.y + 280, 33, 15, D2D1::ColorF::SkyBlue);
-		AimBotPre.MyCreateButton(MenuPoint.x + 210, MenuPoint.y + 355, 33, 15, D2D1::ColorF::SkyBlue,"‘§≈–«∞∫Û:");
-		AimBotPreHealth.MyCreateButton(MenuPoint.x + 90, MenuPoint.y + 430, 33, 15, D2D1::ColorF::SkyBlue,"‘§≈–∏ﬂ∂»:");
+		AimBotPre.MyCreateButton(MenuPoint.x + 210, MenuPoint.y + 355, 33, 15, D2D1::ColorF::SkyBlue,"X:");
+		AimBotPreHealth.MyCreateButton(MenuPoint.x + 90, MenuPoint.y + 430, 33, 15, D2D1::ColorF::SkyBlue,"X:");
 
 
 
